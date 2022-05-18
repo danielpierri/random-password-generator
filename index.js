@@ -84,7 +84,7 @@ passwordFour.addEventListener("click", () => {
 
 let darkTheme = false
 
-themeTogglerBtn.innerHTML = `<img class="moon" src="img/moon-empty.png"/>`
+themeTogglerBtn.innerHTML = `<img class="btn-toggle-theme__img" src="img/moon-empty.png"/>`
 
 function toggleTheme() {
   if (darkTheme === false) {
