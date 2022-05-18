@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <script src="index.js" defer></script>
+
+  <title>Password Generator</title>
+</head>
+<body>
+  <div id="main-container" class="main__container">
+    <button id="theme-toggler-btn" class="btn-toggle-theme">☀</button>
+    <h1 id="title" class="title title--dark">Generate a 
+      <br />
+      <span id="title-span" class="title__accent">random password</span>
+    </h1>
+    <p id="subtitle" class="subtitle">Never use an insecure password again</p>
+    <div id="length-container" class="length__container">
+      <label id="password-length" for="length-input" class="password-length">Set a password length:</label>
+      <input name="length-input" id="length-input" class="length-input" type="number" maxlength="16" minlength="8" placeholder="8-16"/>
+      <p id="length-alert-container" class="password-length-alert"></p>
+    </div>
+    <button id="btn-generate" class="btn-generate"><img class="btn-generate__img" src="img/lightning-bolt.png" />Generate passwords</button>
+    <div class="password__container">
+      <div>
+
+        <div class="tooltip">
+          <input name="password" id="password-one" class="password" type="text" placeholder=". . ."/>
+          <span class="tooltip__text">Click to copy</span>
+        </div>
+
+        <div class="tooltip">
+          <input name="password" id="password-two" class="password" type="text" placeholder=". . ." />
+          <span class="tooltip__text">Click to copy</span>
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="tooltip">
+          <input name="password" id="password-three" class="password" type="text" placeholder=". . ." />
+          <span class="tooltip__text">Click to copy</span>
+        </div>
+
+        <div class="tooltip">
+          <input name="password" id="password-four" class="password" type="text" placeholder=". . ." />
+          <span class="tooltip__text">Click to copy</span>
+        </div>
+
+      </div>
+
+      <p id="copied-to-clipboard" class="copied-to-clipboard"></p>
+    </div>
+  </div>
+</body>
+</html>

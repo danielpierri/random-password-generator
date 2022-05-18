@@ -1,0 +1,274 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ECFDF5;
+  font-family: 'Karla', sans-serif;
+  transition: background 100ms ease-in-out;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Karla', sans-serif;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-inline: 1em;
+}
+
+/* Title Style */
+
+.title {
+  color: #2B283A;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: .9;
+  text-align: left;
+}
+
+.title__accent {
+  color: #10B981;
+}
+
+.subtitle {
+  color: #6B7280;
+  margin-top: 0;
+  padding-bottom: 1em;
+  text-align: left;
+}
+
+/* Input Style */
+
+.length__container {
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+.password-length {
+  color: #273549;
+  text-align: left;
+  padding-right: .5em;
+}
+
+.password-length-alert {
+  color: crimson;
+}
+
+.length-input {
+  background-color: #D1FAE5;
+  border: 1px solid #10B981;
+  border-radius: 5px;
+  color: #2B283A;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 4.5ch;
+  margin: 0;
+  overflow-x: hidden;
+  appearance: textfield;
+  -moz-appearance: textfield;
+  transition: all 50ms ease-in-out;
+}
+
+.length-input::placeholder {
+  color: #273549;
+}
+
+.length-input:hover {
+  box-shadow: 0px 0px 1px #273549;
+}
+
+.length-input:focus {
+  outline: 1px solid #059669;
+  box-shadow: 0px 0px 3px #273549;
+}
+
+.length-input:focus::placeholder {
+  opacity: 0;
+}
+
+.length-input::-webkit-inner-spin-button,
+.length-input::-webkit-outer-spin-button { 
+  margin: 0; 
+  -webkit-appearance: none; 
+}
+
+/* Button Style */
+
+.btn-generate,
+.btn-toggle-theme {
+  background-color: #10B981;
+  color: #FFF;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0px 0px 2px black;
+  transition: all 25ms ease-in-out;
+}
+
+.btn-toggle-theme {
+  border-radius: 50%;
+  align-self: flex-end;
+  padding: 0em;
+}
+
+.btn-generate {
+  display: flex;
+  align-items: center;
+  max-width: max-content;
+  margin: 0 auto;
+  border-radius: 15px;
+  padding: .75em 1.25em;
+}
+
+.btn-generate:hover,
+.btn-toggle-theme:hover {
+  background-color: #059669;
+}
+
+.btn-generate:active,
+.btn-toggle-theme:active {
+  box-shadow: 0px 0px 10px 1px #273549 inset;
+  transform: scale(0.99);
+}
+
+.btn-generate__img {
+  padding-right: 5px;
+}
+
+.btn-toggle-theme__img {
+  display: block;
+  padding: .5em;
+}
+
+/* Password Container Style */
+
+.password__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-top: 3px solid #6B7280;
+  margin-top: 2em;
+  padding-top: 2em;
+}
+
+.password {
+  border: none;
+  background-color: #273549;
+  color: #10B981;
+  font-size: .85rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 .5em 2em;
+  padding: .5em;
+}
+
+.password::placeholder {
+  color: #6B7280;
+}
+
+.password:hover {
+  box-shadow: 0px 0px 2px black;
+}
+
+.password:focus {
+  box-shadow: 0px 0px 5px black;
+  outline: 1px solid #059669;
+}
+
+.copied-to-clipboard {
+  color: transparent;
+  font-size: 1.25rem;
+  font-weight: 700;
+  transition: color 100ms ease-in-out;
+}
+
+/* Tooltip Style */
+
+.tooltip {
+  display: inline-block;
+}
+
+.tooltip__text {
+  background-color: #D1FAE5;
+  color: #273549;
+  border-radius:10px;
+  border-bottom-left-radius: 0;
+  border: 1px solid #273549;
+  visibility: hidden;
+  transition: opacity 0.5s;
+  margin-left:-5em;
+  width : 110px;
+  position: absolute;
+  padding: .175em;
+  margin-top : -20px; 
+  opacity: 0;
+  z-index: 1;
+}
+
+.tooltip__text::after {
+  content: "";
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent;
+  position: absolute;
+  top: 5%;
+  right: 100%;  
+  margin-top: -5px;
+}
+
+.tooltip:hover .tooltip__text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Dark Theme Style */
+
+.btn-toggle-theme--dark {
+  background-color: #273549;
+}
+
+.btn-toggle-theme--dark:hover {
+  background-color: #4B5563;
+}
+
+.body--dark {
+  background-color: #111827;
+}
+
+.title--dark {
+  color: #ECFDF5;
+}
+
+.title__accent--dark {
+  color: #4ADF86;
+}
+
+.subtitle--dark {
+  color: #ECFDF5;
+}
+
+.password-length--dark {
+  color: #ECFDF5;
+}
+
+.length-input--dark {
+  background-color: #273549;
+  color: #4ADF86;
+}
+
+.length-input--dark::placeholder {
+  color: #D1FAE5;
+}
+
+.password--dark {
+  color: #4ADF86;
+}
