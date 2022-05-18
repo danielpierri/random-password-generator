@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-* {
-  -webkit-tap-highlight-color: transparent;
-}
-
 body {
   background-color: #ECFDF5;
   font-family: 'Karla', sans-serif;
